@@ -61,3 +61,6 @@ In case it will be a project we will offer multiple solution to help you underst
 - Next Prime Number
 - Complex Number Algebra
 - Limit Calculator
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
