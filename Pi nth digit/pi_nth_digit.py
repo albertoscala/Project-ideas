@@ -2,7 +2,7 @@ from math import factorial
 from decimal import Decimal, getcontext
 
 
-def pi_nth_alg(n):
+def pi_nth_digits(n):
     # Setting the floating accuracy to N
     getcontext().prec = n + 1
 
@@ -27,4 +27,4 @@ def pi_nth_alg(n):
 
 if __name__ == '__main__':
     n = int(input('Insert n position of the digit: '))
-    print(pi_nth_alg(n))
+    print(pi_nth_digits(n))
