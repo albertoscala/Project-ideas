@@ -26,5 +26,5 @@ def pi_nth_digits(n):
 
 
 if __name__ == '__main__':
-    n = int(input('Insert n position of the digit: '))
+    n = int(input('Insert n length of the digits: '))
     print(pi_nth_digits(n))
