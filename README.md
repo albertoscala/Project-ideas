@@ -54,11 +54,11 @@ In case it will be a project we will offer multiple solution to help you underst
 - [Project Euler](https://projecteuler.net/archives)
 - [Kaggle’s Titanic Challenge](https://www.kaggle.com/c/titanic)
 - Create and automatically update a data set
-- Find π to the Nth Digit || [Solution](https://github.com/albertoscala/Project-ideas/blob/main/Pi%20nth%20digit/pi_nth_digit.py) || [Hint](https://en.wikipedia.org/wiki/Chudnovsky_algorithm#:~:text=The%20Chudnovsky%20algorithm%20is%20a,on%20Ramanujan's%20%CF%80%20formulae.)
-- Find e to the Nth Digit || [Solution](https://github.com/albertoscala/Project-ideas/blob/main/Euler's%20number%20nth%20digits/e_nth_digits.py) || [Hint](https://www.nayuki.io/page/approximating-eulers-number-correctly)
+- Find π to the Nth Digit || [Solution](https://github.com/albertoscala/Project-ideas/blob/main/Scientific%20programming/Pi%20nth%20digit/pi_nth_digit.py) || [Hint](https://en.wikipedia.org/wiki/Chudnovsky_algorithm#:~:text=The%20Chudnovsky%20algorithm%20is%20a,on%20Ramanujan's%20%CF%80%20formulae.)
+- Find e to the Nth Digit || [Solution](https://github.com/albertoscala/Project-ideas/blob/main/Scientific%20programming/Euler's%20number%20nth%20digits/e_nth_digits.py) || [Hint](https://www.nayuki.io/page/approximating-eulers-number-correctly)
 - Fibonacci Sequence
 - Prime Factorization
-- Next Prime Number
+- Next Prime Number || [Solution]() || [Hint](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
 - Complex Number Algebra
 - Limit Calculator
 
