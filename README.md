@@ -58,7 +58,7 @@ In case it will be a project we will offer multiple solution to help you underst
 - Find e to the Nth Digit || [Solution](https://github.com/albertoscala/Project-ideas/blob/main/Euler's%20number%20nth%20digits/e_nth_digits.py) || [Hint](https://www.nayuki.io/page/approximating-eulers-number-correctly)
 - Fibonacci Sequence
 - Prime Factorization
-- Next Prime Number
+- Next Prime Number || [Solution]() || [Hint](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
 - Complex Number Algebra
 - Limit Calculator
 
