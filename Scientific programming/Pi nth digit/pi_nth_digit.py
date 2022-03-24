@@ -1,27 +1,51 @@
-from math import factorial
-from fractions import Fraction
+from math import floor
 
 def pi_nth_digits(n):
+    size = floor((10 * n)/3)+1
+    list = [2] * size
 
-    sum = Fraction(0)
-    i = 0
-    c = 1
+    pi = []
 
-    while True:
-        if i%2 == 0:
-            sum += Fraction(1, c)
+    for i in range(size):
+        list[i] = list[i] * 10
+
+    nines = 0
+    predigit = 0
+
+    for j in range(1, size+1):
+        b = 0
+        q = 0
+
+        for i in range(size, 1, -1):
+            b = list[i - 1] + (q * i)
+            list[i - 1] = q % (2 * i - 1)
+            q = b // (2 * i - 1)
+
+        list[0] = q % 10
+        q = q // 10
+
+        if q == 9:
+            nines += 1
+        elif q == 10:
+            pi.append(predigit + 1)
+
+            for k in range(nines):
+                pi.append(0)
+
+            predigit = 0
+            nines = 0
         else:
-            sum -= Fraction(1, c)
+            pi.append(predigit)
 
-        if c > 10 ** n:
+            if nines != 0:
+                for k in range(nines):
+                    pi.append(9)
 
-            sum = sum * (10 ** n)
-            pi = str(sum.numerator // sum.denominator)
+                nines = 0
 
-            return pi[0] + '.' + pi[1:]
+    pi.append(predigit)
 
-        i += 1
-        c += 2
+    return pi
 
 
 '''
