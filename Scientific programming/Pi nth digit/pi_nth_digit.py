@@ -10,7 +10,7 @@ def pi_nth_digits(n):
 
     # Fill the list with 2 and multiply them by 10
     for i in range(size):
-        list.append(2 * 10)
+        list.append(2)
 
     nines = 0
     predigit = 0
@@ -19,13 +19,16 @@ def pi_nth_digits(n):
     for j in range(1, size+1):
         q = 0
 
-        for i in range(size, 1, -1):
-            b = list[i - 1] + (q * i)
-            list[i - 1] = q % (2 * i - 1)
-            q = b // (2 * i - 1)
+        for i in range(size, 0, -1):
+            b = 10 * list[i - 1] + (q * i)
+            print(b)
+            list[i - 1] = b % ((2 * i) - 1)
+            print(list[i - 1])
+            q = int(b / ((2 * i) - 1))
+            print(q)
 
         list[0] = q % 10
-        q = q // 10
+        q = int(q / 10)
 
         if q == 9:
             nines += 1
@@ -37,8 +40,10 @@ def pi_nth_digits(n):
 
             predigit = 0
             nines = 0
+
         else:
             pi.append(predigit)
+            predigit = q
 
             if nines != 0:
                 for k in range(nines):
@@ -48,7 +53,7 @@ def pi_nth_digits(n):
 
     pi.append(predigit)
 
-    return pi
+    return pi[1] + '.' + pi[2:n]
 
 
 '''
@@ -81,23 +86,23 @@ def pi_nth_digits(n):
 
 
 def test_5_digits():
-    assert pi_nth_digits(5) == 3.14159
+    assert pi_nth_digits(5) == '3.14159'
 
 
 def test_10_digits():
-    assert pi_nth_digits(10) == 3.1415926536
+    assert pi_nth_digits(10) == '3.1415926536'
 
 
 def test_20_digits():
-    assert pi_nth_digits(20) == 3.14159265358979323846
+    assert pi_nth_digits(20) == '3.14159265358979323846'
 
 
 def test_50_digits():
-    assert pi_nth_digits(50) == 3.14159265358979323846264338327950288419716939937511
+    assert pi_nth_digits(50) == '3.14159265358979323846264338327950288419716939937511'
 
 
 def test_100_digits():
-    assert pi_nth_digits(100) == 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170680
+    assert pi_nth_digits(100) == '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170680'
 
 
 # --------------END--------------
