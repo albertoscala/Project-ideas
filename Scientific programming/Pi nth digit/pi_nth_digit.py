@@ -1,19 +1,22 @@
 from math import floor
 
-def pi_nth_digits(n):
-    size = floor((10 * n)/3)+1
-    list = [2] * size
 
+def pi_nth_digits(n):
     pi = []
 
+    # Declaring the list by floor((10 * n) / 3) + 1
+    size = floor((10 * n) / 3) + 1
+    list = []
+
+    # Fill the list with 2 and multiply them by 10
     for i in range(size):
-        list[i] = list[i] * 10
+        list.append(2 * 10)
 
     nines = 0
     predigit = 0
 
+    # For every N
     for j in range(1, size+1):
-        b = 0
         q = 0
 
         for i in range(size, 1, -1):
