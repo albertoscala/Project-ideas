@@ -54,7 +54,7 @@ In case it will be a project we will offer multiple solution to help you underst
 - [Project Euler](https://projecteuler.net/archives)
 - [Kaggle’s Titanic Challenge](https://www.kaggle.com/c/titanic)
 - Create and automatically update a data set
-- Find PI to the Nth Digit
+- Find π to the Nth Digit || [Solution](https://github.com/albertoscala/Project-ideas/blob/main/Pi%20nth%20digit/pi_nth_digit.py) || [Hint](https://en.wikipedia.org/wiki/Chudnovsky_algorithm#:~:text=The%20Chudnovsky%20algorithm%20is%20a,on%20Ramanujan's%20%CF%80%20formulae.)
 - Find e to the Nth Digit
 - Fibonacci Sequence
 - Prime Factorization

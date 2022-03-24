@@ -2,10 +2,9 @@ from math import factorial
 from decimal import Decimal, getcontext
 
 
-
-def pi_nth_alg(n):
+def pi_nth_digits(n):
     # Setting the floating accuracy to N
-    getcontext().prec = n+1
+    getcontext().prec = n + 1
 
     # Declaring PI as a decimal for a better precision
     pi = Decimal()
@@ -25,6 +24,7 @@ def pi_nth_alg(n):
     # Returning PI's to Nth digit
     return pi
 
+
 if __name__ == '__main__':
-    n = int(input('Insert n position of the digit: '))
-    print(pi_nth_alg(n))
+    n = int(input('Insert n length of the digits: '))
+    print(pi_nth_digits(n))
