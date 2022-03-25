@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27568099-c9d0-4693-9048-92c922b5bb2c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Project-ideas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project-ideas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scientific programming/Pi nth digit/pi_nth_digit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scientific programming/Pi nth digit/pi_nth_digit.py" afterDir="false" />
-    </list>
+    <list default="true" id="27568099-c9d0-4693-9048-92c922b5bb2c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +87,7 @@
       <workItem from="1648136752244" duration="3809000" />
       <workItem from="1648150138993" duration="3275000" />
       <workItem from="1648194638229" duration="2000" />
-      <workItem from="1648194650988" duration="4078000" />
+      <workItem from="1648194650988" duration="4380000" />
     </task>
     <servers />
   </component>
