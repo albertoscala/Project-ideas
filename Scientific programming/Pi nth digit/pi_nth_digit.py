@@ -1,11 +1,24 @@
+# Implementing spigot algorithm for calculating PI digits
+# https://www.cut-the-knot.org/Curriculum/Algorithms/SpigotForPi.shtml
+
 from math import floor
 
 
+def round(n, len):
+    r = int(str(n)[len+1])
+
+    if r >= 5:
+        return int(str(n)[:len+1]) + 1
+
+    return int(str(n)[:len+1])
+
+
 def pi_nth_digits(n):
-    pi = []
+
+    pi = ''
 
     # Declaring the list by floor((10 * n) / 3) + 1
-    size = floor((10 * n) / 3) + 1
+    size = floor((10 * (n+11)) / 3) + 1
     list = []
 
     # Fill the list with 2 and multiply them by 10
@@ -16,71 +29,52 @@ def pi_nth_digits(n):
     predigit = 0
 
     # For every N
-    for j in range(1, size+1):
+    for j in range(1, n+12):
         q = 0
 
+        # Multiply by 10 every element
+        # Put the list into the regular form
         for i in range(size, 0, -1):
             b = 10 * list[i - 1] + (q * i)
-            print(b)
             list[i - 1] = b % ((2 * i) - 1)
-            print(list[i - 1])
             q = int(b / ((2 * i) - 1))
-            print(q)
 
+
+        # Get the next predigit
         list[0] = q % 10
         q = int(q / 10)
 
+        # Adjust the predigits
         if q == 9:
             nines += 1
         elif q == 10:
-            pi.append(predigit + 1)
+            pi += str(predigit + 1)
 
             for k in range(nines):
-                pi.append(0)
+                pi += str(0)
 
             predigit = 0
             nines = 0
 
         else:
-            pi.append(predigit)
+            pi += str(predigit)
             predigit = q
 
             if nines != 0:
                 for k in range(nines):
-                    pi.append(9)
+                    pi += str(9)
 
                 nines = 0
 
-    pi.append(predigit)
+    # Final correction
+    pi += str(predigit)
 
-    return pi[1] + '.' + pi[2:n]
+    # Quick correction for the rounding and turning it into a string
+    pi = str(round(int(pi[1:]), n))
 
-
-'''
-def pi_nth_digits(n):
-
-    # Declaring PI as a decimal for a better precision
-    temp = Fraction(0)
-
-    # Using the formula for N+2 times to obtain PI
-    for i in range(n):
-        div = (((-1) ** i) * (factorial(6 * i)) * (13591409 + 545140134 * i))
-        den = ((factorial(3 * i)) * (factorial(i) ** 3) * (640320 ** (3 * i)))
-        temp += Fraction(div, den)
-
-    # Multiplying for the costants
-    temp *= Fraction(12, Fraction(640320 ** 1.5))
-
-    # Reversing the PI
-    temp = Fraction(temp.denominator, temp.numerator)
-
-    temp = temp * (10 ** n)
-
-    pi = str(round(temp.numerator // temp.denominator))
-
-    # Returning PI's to Nth digit
+    # Final Pi result
     return pi[0] + '.' + pi[1:]
-'''
+
 
 # -------------TESTS-------------
 
