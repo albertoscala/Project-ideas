@@ -1,6 +1,6 @@
 # Project ideas
 
-Hey guys, this is a repository with a collection of all the cool projects and exercises resources that we have found on the internet.
+Hi guys, this is a repository with a collection of all the cool projects and exercises resources that we have found on the internet.
 
 The main reason we are doing this, it is because we know how hard could be studying CS and at the same time putting the same effort to make the things you study real.
 So we decided to make this repository with cool projects and exercises resources that helped us to improve and test our skills aquired during our studies.
